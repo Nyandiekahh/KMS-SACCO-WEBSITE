@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333;
+}
+
+.App {
+  overflow-x: hidden;
+}
+
+/* Animation for the hero section background elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Gradient animations */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-animated {
+  background: linear-gradient(-45deg, #3b82f6, #8b5cf6, #ec4899);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+}
+
+/* Tailwind CSS classes would normally handle most styling, but here are some additional custom styles */
+.shadow-glow {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Add a shiny border effect to certain elements */
+.shiny-border {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.shiny-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background-size: 400% 400%;
+  animation: gradientAnimation 3s ease infinite;
+  z-index: -1;
+  border-radius: inherit;
+}
