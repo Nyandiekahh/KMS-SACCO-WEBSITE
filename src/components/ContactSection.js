@@ -36,8 +36,8 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="text-gray-500">Email</p>
-                    <a href="mailto:kufanyanambayasacco@gmail.com" className="text-blue-600 font-medium hover:underline">
-                      kufanyanambayasacco@gmail.com
+                    <a href="mailto:kms2022.sacco@gmail.com" className="text-blue-600 font-medium hover:underline">
+                    kms2022.sacco@gmail.com
                     </a>
                   </div>
                 </div>

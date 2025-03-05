@@ -47,7 +47,7 @@ const ContactPage = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-800 mb-1">Email Us</h3>
                   <p className="text-gray-600 mb-2">For general inquiries, membership applications, and support</p>
-                  <a href="mailto:kufanyanambayasacco@gmail.com" className="text-blue-600 hover:underline">kufanyanambayasacco@gmail.com</a>
+                  <a href="mailto:kms2022.sacco@gmail.com" className="text-blue-600 hover:underline">kms2022.sacco@gmail.com</a>
                 </div>
               </div>
               
@@ -214,7 +214,7 @@ const ContactPage = () => {
               },
               {
                 question: "How do I update my contact information?",
-                answer: "You can update your contact information by sending an email to kufanyanambayasacco@gmail.com with your membership number and the new contact details, or by calling our customer service line."
+                answer: "You can update your contact information by sending an email to kms2022.sacco@gmail.com with your membership number and the new contact details, or by calling our customer service line."
               },
               {
                 question: "Can I request documents or statements via email?",
