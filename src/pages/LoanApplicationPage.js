@@ -265,10 +265,10 @@ const LoanApplicationPage = () => {
               </div>
               <h2 className="text-3xl font-bold text-gray-800 mb-4">Application Submitted Successfully!</h2>
               <p className="text-lg text-gray-600 mb-8">
-                Thank you for applying for a loan with KMS SACCO Limited. We have received your application and will review it within 14 business days. Your guarantors will be contacted to confirm their commitment.
+                Thank you for applying for a loan with KMS SACCO Limited. We have received your application and will review it within 12 hours. Your guarantors will be contacted to confirm their commitment.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                If you have any questions, please contact us at kufanyanambayasacco@gmail.com or +254796611599.
+                If you have any questions, please contact us at kms2022.sacco@gmail.com or +254796611599.
               </p>
               <button
                 onClick={() => window.location.href = '/'}
