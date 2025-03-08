@@ -8,6 +8,7 @@ import AboutPage from './pages/AboutPage';
 import ServicesPage from './pages/ServicesPage';
 import MembershipPage from './pages/MembershipPage';
 import ContactPage from './pages/ContactPage';
+import LoanApplicationPage from './pages/LoanApplicationPage'; // Import the new loan application page
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/membership" element={<MembershipPage />} />
             <Route path="/contact" element={<ContactPage />} />
+            <Route path="/loan-application" element={<LoanApplicationPage />} />
           </Routes>
         </main>
         <Footer />

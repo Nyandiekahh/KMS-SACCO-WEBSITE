@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
@@ -54,6 +55,18 @@ const HeroSection = () => {
                 >
                   Become a Member
                 </motion.button>
+                
+                {/* New Loan Application Button */}
+                <Link to="/loan-application">
+                  <motion.button
+                    className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-md text-base font-medium shadow-md"
+                    whileHover={{ scale: 1.03 }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    Apply for Loan
+                  </motion.button>
+                </Link>
+                
                 <motion.button
                   className="bg-transparent border border-blue-600 text-blue-600 px-6 py-3 rounded-md text-base font-medium"
                   whileHover={{ scale: 1.03, backgroundColor: "rgba(37, 99, 235, 0.05)" }}
