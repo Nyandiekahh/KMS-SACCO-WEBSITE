@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaHandshake, FaHistory, FaChartLine } from 'react-icons/fa';
+import { FaHandshake, FaHistory, FaChartLine, FaQuoteLeft, FaQuoteRight } from 'react-icons/fa';
 
 const AboutPage = () => {
   return (
@@ -39,13 +39,13 @@ const AboutPage = () => {
           >
             <h2 className="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
             <p className="text-gray-600 mb-4">
-              KMS SACCO Limited was established with a vision to empower individuals through accessible financial services. Our journey began with a small group of dedicated individuals who believed in the power of community-based financial solutions.
+              KMS SACCO Limited was established in 2022 with a vision to empower individuals through accessible financial services. Our journey began with just 2 dedicated members who believed in the power of community-based financial solutions.
             </p>
             <p className="text-gray-600 mb-4">
-              Over the years, we have grown into a trusted financial partner for thousands of members across Kenya, providing savings solutions, loans, and financial education to help our members achieve their goals.
+              Initially, we operated as a merry-go-round, investing together and giving proceeds to one member while saving 40% of the investment. After seeing the power of collective saving, we increased our investment amounts and transitioned to a full-time savings model.
             </p>
             <p className="text-gray-600">
-              Today, we continue to uphold our founding principles of financial inclusion, member participation, and social responsibility, working tirelessly to build a prosperous future for our members and their communities.
+              As interest grew, we formalized our membership process with clear terms and conditions. Today, we have grown to over 10 members and continue to uphold our founding principles of financial inclusion, member participation, and social responsibility.
             </p>
           </motion.div>
           
@@ -65,23 +65,23 @@ const AboutPage = () => {
               
               <div className="space-y-6">
                 <div className="border-l-2 border-blue-300 pl-4 pb-6">
-                  <h4 className="text-lg font-bold text-gray-800">2015</h4>
-                  <p className="text-gray-600">Founding of KMS SACCO with 20 initial members</p>
+                  <h4 className="text-lg font-bold text-gray-800">2022</h4>
+                  <p className="text-gray-600">Founding of KMS SACCO with 2 initial members</p>
                 </div>
                 
                 <div className="border-l-2 border-blue-300 pl-4 pb-6">
-                  <h4 className="text-lg font-bold text-gray-800">2018</h4>
-                  <p className="text-gray-600">Reached 500 members and expanded loan products</p>
+                  <h4 className="text-lg font-bold text-gray-800">Early 2022</h4>
+                  <p className="text-gray-600">Expanded to 3 members - "the boys" - operating as a merry-go-round</p>
                 </div>
                 
                 <div className="border-l-2 border-blue-300 pl-4 pb-6">
-                  <h4 className="text-lg font-bold text-gray-800">2020</h4>
-                  <p className="text-gray-600">Launched digital banking platform for members</p>
+                  <h4 className="text-lg font-bold text-gray-800">Late 2022</h4>
+                  <p className="text-gray-600">Transitioned from merry-go-round to full-time savings model</p>
                 </div>
                 
                 <div className="border-l-2 border-blue-300 pl-4">
                   <h4 className="text-lg font-bold text-gray-800">Today</h4>
-                  <p className="text-gray-600">Serving thousands of members with comprehensive financial solutions</p>
+                  <p className="text-gray-600">Formalized membership process with 10+ members and growing</p>
                 </div>
               </div>
             </div>
@@ -91,46 +91,110 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
+      {/* Founder's Message Section */}
       <section className="bg-gray-50 py-16 mb-16">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800">Our Mission & Vision</h2>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <FaHandshake className="text-blue-600 text-3xl" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800 text-center">Our Mission</h3>
-              <p className="text-gray-600 text-center">
-                To provide accessible, inclusive financial services that empower our members to achieve financial stability and growth, while fostering community development through ethical practices.
-              </p>
-            </motion.div>
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold text-gray-800">A Message from Our Founder</h2>
+            </div>
             
-            <motion.div 
-              className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
-                <FaChartLine className="text-blue-600 text-3xl" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4 text-gray-800 text-center">Our Vision</h3>
-              <p className="text-gray-600 text-center">
-                To be the leading member-owned financial cooperative in Kenya, recognized for excellence in service delivery, innovation, and commitment to improving the financial well-being of our members.
-              </p>
-            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              <motion.div
+                className="md:col-span-1 flex justify-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <div className="relative">
+                  <img 
+                    src="/api/placeholder/300/300" 
+                    alt="Founder" 
+                    className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-xl" 
+                  />
+                  <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white py-1 px-3 rounded-full text-sm font-medium">
+                    Founder
+                  </div>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                className="md:col-span-2"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100 relative">
+                  <FaQuoteLeft className="text-blue-100 text-4xl absolute top-4 left-4" />
+                  
+                  <div className="relative z-10">
+                    <p className="text-gray-600 mb-4">
+                      When I established KMS SACCO in 2022, I was driven by a simple but powerful vision: to create a financial institution that truly serves its community. Starting with just two members, we believed in the power of collective saving and investment.
+                    </p>
+                    <p className="text-gray-600 mb-4">
+                      What began as a modest merry-go-round among friends has evolved into a structured savings cooperative. We initially invested together, distributing funds to one member while saving 40% of our contributions. As we saw the benefits of this approach, we increased our investment amounts and shifted to a full-time savings model.
+                    </p>
+                    <p className="text-gray-600 mb-4">
+                      Our growth to over 10 members has been organic and purposeful. We've established clear terms and conditions for membership to ensure the stability and integrity of our cooperative. 
+                    </p>
+                    <p className="text-gray-600">
+                      I remain committed to our founding principles as we continue to grow. At KMS SACCO, you are more than just a member—you are part of our financial family, and together we are building a prosperous future.
+                    </p>
+                    
+                    <div className="mt-6 text-right">
+                      <p className="font-bold text-gray-800">Your Name</p>
+                      <p className="text-blue-600">Founder, KMS SACCO</p>
+                    </div>
+                  </div>
+                  
+                  <FaQuoteRight className="text-blue-100 text-4xl absolute bottom-4 right-4" />
+                </div>
+              </motion.div>
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* Mission & Vision Section */}
+      <section className="container mx-auto px-4 mb-16">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-800">Our Mission & Vision</h2>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <motion.div 
+            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <FaHandshake className="text-blue-600 text-3xl" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-gray-800 text-center">Our Mission</h3>
+            <p className="text-gray-600 text-center">
+              To provide accessible, inclusive financial services that empower our members to achieve financial stability and growth, while fostering community development through ethical practices.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
+              <FaChartLine className="text-blue-600 text-3xl" />
+            </div>
+            <h3 className="text-2xl font-bold mb-4 text-gray-800 text-center">Our Vision</h3>
+            <p className="text-gray-600 text-center">
+              To be the leading member-owned financial cooperative in Kenya, recognized for excellence in service delivery, innovation, and commitment to improving the financial well-being of our members.
+            </p>
+          </motion.div>
         </div>
       </section>
 
