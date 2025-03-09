@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
 
 const Header = ({ scrollY }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
   const pages = [
     { name: 'Home', path: '/' },
@@ -12,6 +14,11 @@ const Header = ({ scrollY }) => {
     { name: 'Membership', path: '/membership' },
     { name: 'Contact', path: '/contact' }
   ];
+  
+  // Dashboard navigation
+  const handleDashboardClick = () => {
+    navigate('/dashboard');
+  };
 
   return (
     <motion.header 
@@ -50,17 +57,63 @@ const Header = ({ scrollY }) => {
               </Link>
             </motion.div>
           ))}
-          <motion.button
-            className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md font-medium shadow-sm ml-2"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Join Now
-          </motion.button>
+          
+          {/* Auth Buttons */}
+          <div className="flex items-center space-x-3">
+            <motion.button
+              className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-md font-medium shadow-sm"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Join Now
+            </motion.button>
+            
+            <SignedOut>
+              <SignInButton mode="modal">
+                <motion.button
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-md font-medium shadow-sm"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Login
+                </motion.button>
+              </SignInButton>
+            </SignedOut>
+            
+            <SignedIn>
+              <div className="flex items-center space-x-3">
+                <motion.button
+                  onClick={handleDashboardClick}
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-md font-medium shadow-sm"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Dashboard
+                </motion.button>
+                
+                <div className="ml-2">
+                  <UserButton 
+                    afterSignOutUrl="/"
+                    appearance={{
+                      elements: {
+                        userButtonAvatarBox: "w-10 h-10",
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+            </SignedIn>
+          </div>
         </nav>
         
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center space-x-2">
+          <SignedIn>
+            <div className="mr-2">
+              <UserButton afterSignOutUrl="/" />
+            </div>
+          </SignedIn>
+          
           <button 
             onClick={() => setIsOpen(!isOpen)}
             className="focus:outline-none text-gray-700"
@@ -96,9 +149,30 @@ const Header = ({ scrollY }) => {
                 {page.name}
               </Link>
             ))}
-            <button className="w-full mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium shadow-sm">
-              Join Now
-            </button>
+            
+            <SignedIn>
+              <Link 
+                to="/dashboard"
+                className="block py-2 text-purple-600 font-medium hover:text-purple-800"
+                onClick={() => setIsOpen(false)}
+              >
+                Dashboard
+              </Link>
+            </SignedIn>
+            
+            <div className="mt-4">
+              <button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-md font-medium shadow-sm">
+                Join Now
+              </button>
+              
+              <SignedOut>
+                <SignInButton mode="modal">
+                  <button className="w-full mt-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-md font-medium shadow-sm">
+                    Login
+                  </button>
+                </SignInButton>
+              </SignedOut>
+            </div>
           </div>
         </motion.div>
       )}

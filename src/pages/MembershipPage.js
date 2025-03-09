@@ -37,7 +37,7 @@ const MembershipPage = () => {
     {
       number: "01",
       title: "Submit Application",
-      description: "Send an email to kufanyanambayasacco@gmail.com expressing your interest in joining and including a brief introduction."
+      description: "Send an email to kms2022.sacco@gmail.com expressing your interest in joining and including a brief introduction."
     },
     {
       number: "02",
