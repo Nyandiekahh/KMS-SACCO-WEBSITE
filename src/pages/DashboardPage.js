@@ -25,7 +25,7 @@ const DashboardPage = () => {
   const [depositAmount, setDepositAmount] = useState('');
   const navigate = useNavigate();
   const { user } = useUser();
-  const { signOut } = useClerk();
+  const { signOut, openUserProfile } = useClerk();
 
   // Format user's full name
   const fullName = user ? `${user.firstName} ${user.lastName}` : 'Member';
@@ -1079,9 +1079,13 @@ const DashboardPage = () => {
                 <div className="bg-white rounded-2xl shadow-sm p-6 border border-gray-100">
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                     <h2 className="text-lg font-bold mb-2 md:mb-0">Personal Information</h2>
-                    <button className="text-blue-600 hover:underline flex items-center">
-                      <FaUserCircle className="mr-1" /> Manage Clerk Profile
+                    <button
+                    onClick={() => openUserProfile()}
+                    className="text-blue-600 hover:underline flex items-center"
+                    >
+                    <FaUserCircle className="mr-1" /> Manage Cler Profile
                     </button>
+                    
                   </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
