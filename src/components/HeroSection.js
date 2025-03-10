@@ -3,6 +3,12 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
+  // Function to open terms and conditions in a new tab
+  const openTermsAndConditions = (e) => {
+    e.preventDefault();
+    window.open('/KMS LIMITED TERMS AND CONDITIONS.pdf', '_blank', 'noopener,noreferrer');
+  };
+
   return (
     <section id="home" className="relative pt-28 pb-20 bg-white overflow-hidden">
       {/* Subtle Background Elements */}
@@ -68,6 +74,7 @@ const HeroSection = () => {
                 </Link>
                 
                 <motion.button
+                  onClick={openTermsAndConditions}
                   className="bg-transparent border border-blue-600 text-blue-600 px-6 py-3 rounded-md text-base font-medium"
                   whileHover={{ scale: 1.03, backgroundColor: "rgba(37, 99, 235, 0.05)" }}
                   whileTap={{ scale: 0.97 }}
