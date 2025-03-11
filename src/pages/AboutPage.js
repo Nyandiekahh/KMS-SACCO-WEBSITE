@@ -144,7 +144,7 @@ const AboutPage = () => {
                     </p>
                     
                     <div className="mt-6 text-right">
-                      <p className="font-bold text-gray-800">Your Name</p>
+                      <p className="font-bold text-gray-800">Einstein Mokua</p>
                       <p className="text-blue-600">Founder, KMS SACCO</p>
                     </div>
                   </div>
