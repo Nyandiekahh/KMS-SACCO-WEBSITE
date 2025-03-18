@@ -146,7 +146,7 @@ const membersData = {
     phoneNumber: "+254712345606",
     idNumber: "12345606",
     memberSince: "March 2022",
-    isAdmin: false,
+    isAdmin: true,
     balance: {
       shareCapital: {
         paid: 5000,
@@ -215,7 +215,7 @@ const membersData = {
     phoneNumber: "+254712345609",
     idNumber: "12345609",
     memberSince: "March 2022",
-    isAdmin: false,
+    isAdmin: true,
     balance: {
       shareCapital: {
         paid: 0,
